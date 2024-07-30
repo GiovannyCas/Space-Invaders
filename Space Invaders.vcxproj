@@ -146,7 +146,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="scr\Core\Game.cpp" />
+    <ClCompile Include="scr\Core\ui\button.cpp" />
     <ClCompile Include="scr\Core\ui\stack_menu.cpp" />
+    <ClCompile Include="scr\Core\ui\widget.cpp" />
     <ClCompile Include="scr\main.cpp" />
     <ClCompile Include="scr\Core\state\State_Base.cpp" />
     <ClCompile Include="scr\Space_Invaders\states\state_main_menu.cpp" />
@@ -154,7 +156,9 @@
   <ItemGroup>
     <ClInclude Include="scr\Core\Game.h" />
     <ClInclude Include="scr\Core\state\State_Base.h" />
+    <ClInclude Include="scr\Core\ui\button.h" />
     <ClInclude Include="scr\Core\ui\stack_menu.h" />
+    <ClInclude Include="scr\Core\ui\widget.h" />
     <ClInclude Include="scr\Space_Invaders\display_info.h" />
     <ClInclude Include="scr\Space_Invaders\states\state_main_menu.h" />
   </ItemGroup>

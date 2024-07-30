@@ -14,6 +14,6 @@ namespace Core {
 		: m_pGame(&game)
 		, m_name(name)
 	{
-		//m_pGame->resizedWindow(resizedWindowWidth, resizedWindowHeight);
+		m_pGame->resizedWindow(resizedWindowWidth, resizedWindowHeight);
 	}
 }

@@ -1,6 +1,8 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
+
+#include "Space_Invaders/states/state_main_menu.h"
 #include "Core/Game.h"
 
 
@@ -25,7 +27,7 @@ namespace {
     {
         std::cout << "\nTo choose another Game, simply close the window\n";
         std::cin.ignore();
-        arcade::Game app{};
+        Core::Game app{};
         app.initGame<T>();
         app.Run();
         std::cout << '\n';
@@ -66,7 +68,7 @@ int main()
         switch (option)
         {
         case 1 :
-            std::cout << "Game Starting";
+            run<space_invaders::state_main_menu>();
             break;
         case GAMES + 1:
             exit = true;

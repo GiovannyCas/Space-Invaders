@@ -8,7 +8,10 @@ namespace Core {
 		m_window.setPosition({ m_window.getPosition().x, 0 });
 		m_window.setFramerateLimit(60);
 
+	}
 
+	void Game::Run()
+	{
 		constexpr unsigned TPS = 30;
 		const sf::Time timePerUpdate = sf::seconds(1.0f / float(TPS));
 		unsigned tick = 0;
@@ -37,7 +40,8 @@ namespace Core {
 
 			// Render
 			m_window.clear();
-
+			state.render(m_window);
+			
 			m_window.display();
 
 
@@ -45,7 +49,6 @@ namespace Core {
 			handleEvent();
 			updateStates();
 		}
-
 	}
 
 	void Game::handleEvent()
@@ -117,6 +120,11 @@ namespace Core {
 	void Game::exitGame()
 	{
 		m_action.type = Action::Type::Quit;
+	}
+
+	const sf::RenderWindow& Game::getWindow() const
+	{
+		return m_window;
 	}
 
 	void Game::resizedWindow(unsigned int width, unsigned int height)
