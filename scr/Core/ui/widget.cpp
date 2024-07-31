@@ -12,7 +12,7 @@ namespace Core
 			setCharacterSize(25);
 			setOutlineColor(sf::Color::Black);
 			setFillColor(sf::Color::White);
-			
+			setFont(Resource_Holder::get().fonts.get("arcade"));
 		}
 
 		bool Widget::Rectangle::isRolledOn(const sf::RenderWindow& window) const

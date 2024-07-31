@@ -3,6 +3,8 @@
 #include <SFML/Graphics.hpp>
 #include <memory>
 
+#include "../Core/resourse/resources_holder.h"
+
 namespace Core {
 
 	namespace UI {

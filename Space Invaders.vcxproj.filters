@@ -36,6 +36,9 @@
     <ClCompile Include="scr\Core\ui\button.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="scr\Core\resourse\resources_holder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="scr\Core\Game.h">
@@ -59,5 +62,22 @@
     <ClInclude Include="scr\Core\ui\button.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="scr\Core\resourse\resource_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Core\resourse\resources_holder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="res\fonts\arcade.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\txrs\_fail_.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\txrs\si\logo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

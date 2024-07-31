@@ -21,7 +21,7 @@ namespace Core {
 		auto lag = sf::Time::Zero;
 
 		// Main Loop of the Game 
-		while (m_window.isOpen())
+		while (m_window.isOpen() && !m_states.empty())
 		{
 			auto& state = getCurrentState();
 

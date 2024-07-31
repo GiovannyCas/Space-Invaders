@@ -146,6 +146,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="scr\Core\Game.cpp" />
+    <ClCompile Include="scr\Core\resourse\resources_holder.cpp" />
     <ClCompile Include="scr\Core\ui\button.cpp" />
     <ClCompile Include="scr\Core\ui\stack_menu.cpp" />
     <ClCompile Include="scr\Core\ui\widget.cpp" />
@@ -155,12 +156,21 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="scr\Core\Game.h" />
+    <ClInclude Include="scr\Core\resourse\resources_holder.h" />
+    <ClInclude Include="scr\Core\resourse\resource_manager.h" />
     <ClInclude Include="scr\Core\state\State_Base.h" />
     <ClInclude Include="scr\Core\ui\button.h" />
     <ClInclude Include="scr\Core\ui\stack_menu.h" />
     <ClInclude Include="scr\Core\ui\widget.h" />
     <ClInclude Include="scr\Space_Invaders\display_info.h" />
     <ClInclude Include="scr\Space_Invaders\states\state_main_menu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="res\fonts\arcade.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\txrs\si\logo.png" />
+    <Image Include="res\txrs\_fail_.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

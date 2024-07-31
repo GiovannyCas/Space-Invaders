@@ -37,16 +37,16 @@ namespace Core
             m_button.setTexture(&tex);
         }
 
-        void Button::handleEvent(sf::Event e, const sf::RenderWindow& window)
+        void Button::handleEvent(sf::Event ev, const sf::RenderWindow& window)
         {
             if (m_isDisabled) {
                 return;
             }
             auto pos = sf::Mouse::getPosition(window);
 
-            switch (e.type) {
+            switch (ev.type) {
             case sf::Event::MouseButtonReleased:
-                switch (e.mouseButton.button) {
+                switch (ev.mouseButton.button) {
                 case sf::Mouse::Left:
                     if (m_button.getGlobalBounds().contains((float)pos.x,
                         (float)pos.y)) {
@@ -66,6 +66,7 @@ namespace Core
         {
             renderer.draw(m_button);
             renderer.draw(m_text);
+            
         }
 
         void Button::setPosition(const sf::Vector2f& pos)

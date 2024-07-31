@@ -1,5 +1,7 @@
 #include "stack_menu.h"
 
+#include "../Core/resourse/resources_holder.h"
+
 namespace Core {
 
     constexpr float BASE_Y = 95.0f;

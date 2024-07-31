@@ -11,8 +11,8 @@ namespace space_invaders {
 		: Core::State_Base(game, "Main Menu", Display::WIDTH, Display::HEIGHT)
 		, m_mainMenu(game.getWindow(), Display::HEIGHT / 2 - 100)
     {
-       /* m_banner.setSize({ (float)Display::WIDTH, 200 });
-        m_banner.setTexture(&arcade::ResourceHolder::get().textures.get("si/logo"));*/
+        m_banner.setSize({ (float)Display::WIDTH, 200 });
+        m_banner.setTexture(&Core::Resource_Holder::get().textures.get("si/logo"));
 
         auto playBtn = Core::UI::makeButton();
         playBtn->setText("Play game");
