@@ -84,7 +84,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)\Library\SFML-2.6.1\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -121,7 +121,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)\Library\SFML-2.6.1\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -145,6 +145,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="scr\Core\util\animation.cpp" />
+    <ClCompile Include="scr\Space_Invaders\collidable.cpp" />
     <ClCompile Include="scr\Core\Game.cpp" />
     <ClCompile Include="scr\Core\resourse\resources_holder.cpp" />
     <ClCompile Include="scr\Core\ui\button.cpp" />
@@ -152,9 +154,21 @@
     <ClCompile Include="scr\Core\ui\widget.cpp" />
     <ClCompile Include="scr\main.cpp" />
     <ClCompile Include="scr\Core\state\State_Base.cpp" />
+    <ClCompile Include="scr\Space_Invaders\animation_renderer.cpp" />
+    <ClCompile Include="scr\Space_Invaders\entity\alien.cpp" />
+    <ClCompile Include="scr\Space_Invaders\entity\explosion.cpp" />
+    <ClCompile Include="scr\Space_Invaders\entity\invader.cpp" />
+    <ClCompile Include="scr\Space_Invaders\entity\player.cpp" />
+    <ClCompile Include="scr\Space_Invaders\entity\projectile.cpp" />
+    <ClCompile Include="scr\Space_Invaders\entity\shield.cpp" />
+    <ClCompile Include="scr\Space_Invaders\invader_manager.cpp" />
     <ClCompile Include="scr\Space_Invaders\states\state_main_menu.cpp" />
+    <ClCompile Include="scr\Space_Invaders\states\state_playing.cpp" />
+    <ClCompile Include="scr\Space_Invaders\world.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="scr\Core\util\animation.h" />
+    <ClInclude Include="scr\Space_Invaders\collidable.h" />
     <ClInclude Include="scr\Core\Game.h" />
     <ClInclude Include="scr\Core\resourse\resources_holder.h" />
     <ClInclude Include="scr\Core\resourse\resource_manager.h" />
@@ -162,15 +176,42 @@
     <ClInclude Include="scr\Core\ui\button.h" />
     <ClInclude Include="scr\Core\ui\stack_menu.h" />
     <ClInclude Include="scr\Core\ui\widget.h" />
+    <ClInclude Include="scr\Core\util\random.h" />
+    <ClInclude Include="scr\Space_Invaders\animation_renderer.h" />
     <ClInclude Include="scr\Space_Invaders\display_info.h" />
+    <ClInclude Include="scr\Space_Invaders\entity\alien.h" />
+    <ClInclude Include="scr\Space_Invaders\entity\explosion.h" />
+    <ClInclude Include="scr\Space_Invaders\entity\invader.h" />
+    <ClInclude Include="scr\Space_Invaders\entity\player.h" />
+    <ClInclude Include="scr\Space_Invaders\entity\projectile.h" />
+    <ClInclude Include="scr\Space_Invaders\entity\shield.h" />
+    <ClInclude Include="scr\Space_Invaders\invader_manager.h" />
     <ClInclude Include="scr\Space_Invaders\states\state_main_menu.h" />
+    <ClInclude Include="scr\Space_Invaders\states\state_playing.h" />
+    <ClInclude Include="scr\Space_Invaders\world.h" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="res\fonts\arcade.TTF" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\txrs\si\explosion.png" />
+    <Image Include="res\txrs\si\invaders.png" />
     <Image Include="res\txrs\si\logo.png" />
+    <Image Include="res\txrs\si\player.png" />
+    <Image Include="res\txrs\si\projectile.png" />
+    <Image Include="res\txrs\si\ufo.png" />
     <Image Include="res\txrs\_fail_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\sfx\si\explosion.wav" />
+    <Media Include="res\sfx\si\fastinvader1.wav" />
+    <Media Include="res\sfx\si\fastinvader2.wav" />
+    <Media Include="res\sfx\si\fastinvader3.wav" />
+    <Media Include="res\sfx\si\fastinvader4.wav" />
+    <Media Include="res\sfx\si\invaderkilled.wav" />
+    <Media Include="res\sfx\si\shoot.wav" />
+    <Media Include="res\sfx\si\ufo_lowpitch.wav" />
+    <Media Include="res\sfx\_fail_.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

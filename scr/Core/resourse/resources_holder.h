@@ -3,6 +3,7 @@
 
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "resource_manager.h"
 
 namespace Core
@@ -17,7 +18,7 @@ namespace Core
 		
 		Resource_Manager<sf::Font> fonts;
 		Resource_Manager<sf::Texture> textures;
-	
+		Resource_Manager<sf::SoundBuffer> soundBuffers;
 
 
 		static Resource_Holder& get();

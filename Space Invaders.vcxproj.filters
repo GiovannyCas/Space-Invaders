@@ -39,6 +39,42 @@
     <ClCompile Include="scr\Core\resourse\resources_holder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="scr\Space_Invaders\states\state_playing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\Space_Invaders\world.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\Space_Invaders\entity\player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\Space_Invaders\entity\alien.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\Space_Invaders\entity\invader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\Space_Invaders\invader_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\Space_Invaders\animation_renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\Space_Invaders\collidable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\Space_Invaders\entity\projectile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\Space_Invaders\entity\shield.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\Space_Invaders\entity\explosion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\Core\util\animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="scr\Core\Game.h">
@@ -68,6 +104,45 @@
     <ClInclude Include="scr\Core\resourse\resources_holder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="scr\Space_Invaders\states\state_playing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Space_Invaders\world.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Space_Invaders\entity\player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Space_Invaders\entity\alien.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Core\util\random.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Space_Invaders\entity\invader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Space_Invaders\invader_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Space_Invaders\animation_renderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Space_Invaders\collidable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Space_Invaders\entity\projectile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Space_Invaders\entity\shield.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Space_Invaders\entity\explosion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Core\util\animation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Font Include="res\fonts\arcade.TTF" />
@@ -79,5 +154,49 @@
     <Image Include="res\txrs\si\logo.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="res\txrs\si\player.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\txrs\si\ufo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\txrs\si\invaders.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\txrs\si\explosion.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\txrs\si\projectile.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\sfx\si\shoot.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="res\sfx\si\explosion.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="res\sfx\si\ufo_lowpitch.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="res\sfx\_fail_.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="res\sfx\si\fastinvader1.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="res\sfx\si\fastinvader2.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="res\sfx\si\fastinvader3.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="res\sfx\si\fastinvader4.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="res\sfx\si\invaderkilled.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
   </ItemGroup>
 </Project>

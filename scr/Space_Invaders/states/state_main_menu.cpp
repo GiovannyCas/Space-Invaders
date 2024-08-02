@@ -3,6 +3,7 @@
 #include "../Core/Game.h"
 
 #include "../Core/ui/button.h"
+#include "state_playing.h"
 #include "../display_info.h"
 
 namespace space_invaders {
@@ -16,12 +17,11 @@ namespace space_invaders {
 
         auto playBtn = Core::UI::makeButton();
         playBtn->setText("Play game");
-      //  playBtn->setFunction([&]() { m_pGame->pushState<StatePlaying>(*m_pGame); });
+        playBtn->setFunction([&]() { m_pGame->pushState<State_Playing>(*m_pGame); });
 
         auto highscoresBtn = Core::UI::makeButton();
         highscoresBtn->setText("Highscores");
-      //  highscoresBtn->setFunction(
-        //    [&]() { m_pGame->pushState<StateHighscores>(*m_pGame); });
+      //TODO: HighScore board
 
         auto exitBtn = Core::UI::makeButton();
         exitBtn->setText("Exit game");
@@ -40,13 +40,13 @@ namespace space_invaders {
 
     void state_main_menu::update(sf::Time deltaTime)
     {
-       // m_background.update(deltaTime.asSeconds());
+       
 
     }
 
     void state_main_menu::render(sf::RenderTarget& renderer)
     {
-       // m_background.draw(renderer);
+       
         m_mainMenu.render(renderer);
         renderer.draw(m_banner);
     }

@@ -11,6 +11,7 @@ namespace Core {
     Resource_Holder::Resource_Holder()
         : fonts("fonts", "ttf")
         , textures("txrs", "png")
+        , soundBuffers("sfx", "wav")
         
     {
 
