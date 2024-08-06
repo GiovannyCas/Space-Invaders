@@ -11,3 +11,11 @@ C++ and SFML: Leveraging the power of C++ alongside the SFML library, I ensured 
 Visual and Audio Design: The game features pixel art graphics that evoke the charm of classic arcade games, paired with immersive sound effects to enhance player engagement.
 
 Endless Mode and Leaderboards: An endless mode offers continuous challenges, encouraging players to achieve high scores.
+
+![Screenshot (42)](https://github.com/user-attachments/assets/351fabd5-988c-4212-8192-01ef3006e571)
+
+![Screenshot (41)](https://github.com/user-attachments/assets/f2588781-d65e-4c0d-a398-b1a369c3d6cd)
+
+![Screenshot (40)](https://github.com/user-attachments/assets/7d5741e0-acf7-4d48-92cc-3f46b55e989f)
+
+![Screenshot (39)](https://github.com/user-attachments/assets/7ecb260e-fab4-4e09-b353-72acf7706816)
