@@ -3,6 +3,7 @@
 #include "../Core/Game.h"
 
 #include "../Core/ui/button.h"
+#include "state_highscores.h"
 #include "state_playing.h"
 #include "../display_info.h"
 
@@ -21,7 +22,8 @@ namespace space_invaders {
 
         auto highscoresBtn = Core::UI::makeButton();
         highscoresBtn->setText("Highscores");
-      //TODO: HighScore board
+        highscoresBtn->setFunction(
+            [&]() { m_pGame->pushState<State_Highscores>(*m_pGame); });
 
         auto exitBtn = Core::UI::makeButton();
         exitBtn->setText("Exit game");

@@ -6,6 +6,8 @@
 
 #include "../Space_Invaders/display_info.h"
 
+#include "state_highscores.h"
+
 namespace space_invaders 
 {
     State_Playing::State_Playing(Core::Game& game)
@@ -21,7 +23,8 @@ namespace space_invaders
 
         auto submitBtn = std::make_unique<Core::UI::Button>();
         submitBtn->setText("Submit Score");
-     // To DO: HighScore Board 
+        submitBtn->setFunction(
+            [&]() { m_pGame->changeState<State_Highscores>(*m_pGame, m_score); });
 
         auto exitButton = std::make_unique<Core::UI::Button>();
         exitButton->setText("Exit game\n");

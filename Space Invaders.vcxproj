@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -145,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="scr\Core\ui\textbox.cpp" />
     <ClCompile Include="scr\Core\util\animation.cpp" />
     <ClCompile Include="scr\Space_Invaders\collidable.cpp" />
     <ClCompile Include="scr\Core\Game.cpp" />
@@ -162,11 +164,13 @@
     <ClCompile Include="scr\Space_Invaders\entity\projectile.cpp" />
     <ClCompile Include="scr\Space_Invaders\entity\shield.cpp" />
     <ClCompile Include="scr\Space_Invaders\invader_manager.cpp" />
+    <ClCompile Include="scr\Space_Invaders\states\state_highscores.cpp" />
     <ClCompile Include="scr\Space_Invaders\states\state_main_menu.cpp" />
     <ClCompile Include="scr\Space_Invaders\states\state_playing.cpp" />
     <ClCompile Include="scr\Space_Invaders\world.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="scr\Core\ui\textbox.h" />
     <ClInclude Include="scr\Core\util\animation.h" />
     <ClInclude Include="scr\Space_Invaders\collidable.h" />
     <ClInclude Include="scr\Core\Game.h" />
@@ -186,6 +190,7 @@
     <ClInclude Include="scr\Space_Invaders\entity\projectile.h" />
     <ClInclude Include="scr\Space_Invaders\entity\shield.h" />
     <ClInclude Include="scr\Space_Invaders\invader_manager.h" />
+    <ClInclude Include="scr\Space_Invaders\states\state_highscores.h" />
     <ClInclude Include="scr\Space_Invaders\states\state_main_menu.h" />
     <ClInclude Include="scr\Space_Invaders\states\state_playing.h" />
     <ClInclude Include="scr\Space_Invaders\world.h" />
@@ -213,7 +218,21 @@
     <Media Include="res\sfx\si\ufo_lowpitch.wav" />
     <Media Include="res\sfx\_fail_.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="res\SpaceInvaders\scores.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.targets'))" />
+  </Target>
 </Project>

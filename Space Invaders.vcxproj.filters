@@ -75,6 +75,12 @@
     <ClCompile Include="scr\Core\util\animation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="scr\Core\ui\textbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\Space_Invaders\states\state_highscores.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="scr\Core\Game.h">
@@ -143,6 +149,12 @@
     <ClInclude Include="scr\Core\util\animation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="scr\Core\ui\textbox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scr\Space_Invaders\states\state_highscores.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Font Include="res\fonts\arcade.TTF" />
@@ -198,5 +210,11 @@
     <Media Include="res\sfx\si\invaderkilled.wav">
       <Filter>Resource Files</Filter>
     </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="res\SpaceInvaders\scores.txt" />
   </ItemGroup>
 </Project>
